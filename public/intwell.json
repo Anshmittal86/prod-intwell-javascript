@@ -2,51 +2,119 @@
   "services": [
     {
       "id": 1,
-      "image": "./icons/app-development.png",
-      "service": "Web Development",
-      "description": "We craft responsive, high-performing websites tailored to your business needs. Leveraging modern technologies, we ensure seamless user experiences across all devices."
+      "icon": "smartphone",
+      "service": "Mobile App Development",
+      "description": "Cross-platform iOS and Android applications built natively with React Native and Expo."
     },
     {
       "id": 2,
-      "image": "./icons/ui-design.png",
-      "service": "UI/UX Design",
-      "description": "Our designs prioritize user engagement and intuitive navigation. We create visually appealing interfaces that enhance user satisfaction and drive conversions."
+      "icon": "web",
+      "service": "Website Development",
+      "description": "High-performance, responsive websites built with modern web technologies and frameworks."
     },
     {
       "id": 3,
-      "image": "./icons/seo.png",
-      "service": "SEO Optimization",
-      "description": "Enhancing your website's visibility through strategic keyword integration and content optimization. We aim to improve search engine rankings and attract targeted traffic."
+      "icon": "smart_toy",
+      "service": "AI Integration",
+      "description": "Seamlessly integrating powerful AI and machine learning models into your digital products."
     },
     {
       "id": 4,
-      "image": "./icons/remote-access.png",
-      "service": "Web Accessibility",
-      "description": "Ensuring your website is accessible to all users, including those with disabilities. We adhere to WCAG guidelines to promote inclusivity and compliance."
+      "icon": "design_services",
+      "service": "UI/UX Design",
+      "description": "User-centric design systems that prioritize intuitive navigation and breathtaking visual storytelling."
     },
     {
       "id": 5,
-      "image": "./icons/integration.png",
-      "service": "AI Integration",
-      "description": "Incorporating AI solutions to automate tasks and personalize user experiences. We help you stay ahead by integrating intelligent features into your web platforms."
+      "icon": "code_blocks",
+      "service": "Managing Codebase",
+      "description": "Comprehensive code audits, refactoring, and maintaining scalable and secure code repositories."
     },
     {
       "id": 6,
-      "image": "./icons/updating.png",
-      "service": "Website Updates",
-      "description": "Providing regular updates to keep your website current and secure. We ensure optimal performance by implementing the latest features and security patches."
+      "icon": "dashboard_customize",
+      "service": "Frontend Design",
+      "description": "Pixel-perfect, interactive, and highly optimized user interfaces tailored for the modern web."
     },
     {
       "id": 7,
-      "image": "./icons/svg.png",
-      "service": "Domain Name Registration",
-      "description": "Secure your online identity with our domain registration services. We help you find the perfect domain name and manage renewals with ease and reliability."
+      "icon": "dns",
+      "service": "Backend Design",
+      "description": "Robust, secure, and scalable server-side architectures and custom API development."
     },
     {
       "id": 8,
-      "image": "./icons/hosting.png",
-      "service": "Website Hosting",
-      "description": "Reliable and fast website hosting solutions to ensure your site is always accessible. We offer scalable plans with top-tier security and performance."
+      "icon": "architecture",
+      "service": "Architecture Design",
+      "description": "Future-proof system and infrastructure design ensuring enterprise-grade performance and reliability."
+    },
+    {
+      "id": 9,
+      "icon": "rocket_launch",
+      "service": "SEO Optimization",
+      "description": "Strategic search engine dominance through technical SEO, content strategy, and authority building."
+    },
+    {
+      "id": 10,
+      "icon": "shopping_cart",
+      "service": "E-Commerce",
+      "description": "Robust online stores powered by Shopify and custom headless commerce solutions for modern retail."
+    },
+    {
+      "id": 11,
+      "icon": "cloud",
+      "service": "Cloud Strategy",
+      "description": "Future-proof infrastructure on AWS and Azure, ensuring 99.9% uptime and enterprise-grade security."
+    },
+    {
+      "id": 12,
+      "icon": "dns",
+      "service": "Domain & Hosting",
+      "description": "Secure your online identity with reliable, fast, and highly secure hosting and domain registration."
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": 1,
+      "quote": "\"This platform has completely transformed how our team works. The velocity we've achieved in the last quarter is unprecedented.\"",
+      "name": "Sarah Jenkins",
+      "role": "VP of Engineering, TechFlow",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&q=80"
+    },
+    {
+      "id": 2,
+      "quote": "\"The attention to detail and the premium feel of the product is exactly what we were looking for. Highly recommended for modern teams.\"",
+      "name": "Michael Brown",
+      "role": "Design Lead, StudioX",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&q=80"
+    },
+    {
+      "id": 3,
+      "quote": "\"Integration was seamless, and the performance is mind-blowing. It's rare to find a tool that actually delivers on every single promise.\"",
+      "name": "Emily Rodriguez",
+      "role": "Product Manager, Nexus",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&q=80"
+    },
+    {
+      "id": 4,
+      "quote": "\"The best investment we've made this year. Our developer productivity skyrocketed within the first two weeks of adoption.\"",
+      "name": "David Lee",
+      "role": "CTO, Innovate Inc",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&q=80"
+    },
+    {
+      "id": 5,
+      "quote": "\"Incredible support team and a robust feature set. We migrated our entire infrastructure without a single hiccup.\"",
+      "name": "Jessica Moore",
+      "role": "Lead Engineer, DataCorp",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&q=80"
+    },
+    {
+      "id": 6,
+      "quote": "\"A truly beautiful interface paired with unmatched performance. This is what the future of software looks like.\"",
+      "name": "Robert King",
+      "role": "Founder, StartupGrid",
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&q=80"
     }
   ]
 }

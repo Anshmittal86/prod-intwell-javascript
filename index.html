@@ -1,379 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
-    <meta charset="UTF-8" />
-
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>INTWELL | Premier Web Development Agency</title>
     <!-- SEO Optimization -->
-    <meta
-      name="description"
-      content="Intwell Web Development is a results-driven web agency offering modern, responsive websites, SEO solutions, and custom web applications to help businesses grow online."
-    />
-    <meta
-      name="keywords"
-      content="Intwell, web development, website design, custom websites, SEO services, front-end development, full-stack web development, responsive design, modern web solutions"
-    />
-    <meta name="author" content="Intwell Web Development" />
-
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intwell Web Development | Modern Websites & Custom Web Solutions</title>
-
+    <meta name="description" content="Intwell Web Development is a results-driven web agency offering modern, responsive websites, SEO solutions, and custom web applications to help businesses grow online.">
+    <meta name="keywords" content="Intwell, web development, website design, custom websites, SEO services, front-end development, full-stack web development, responsive design, modern web solutions">
+    <meta name="author" content="Intwell Web Development">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Google Fonts -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="./src/assets/css/output.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./src/assets/css/input.css">
   </head>
-  <body class="bg-white text-gray-800">
+  <body class="bg-background text-on-surface font-body-md selection:bg-secondary/30">
     <!-- Loader -->
     <div class="loader-container">
       <span class="loader"></span>
     </div>
 
-    <!-- Main Container -->
+    {{> header }}
+    
     <div id="main">
       <div id="content">
-        <!-- Header -->
-        <header class="w-full bg-purple-600 text-white py-4 px-4 md:px-7 lg:px-10 shadow-md fixed top-0 z-50" id="header" aria-label="header-section">
-          <div class="container mx-auto flex items-center justify-between max-w-[1200px]">
-            <a href="/">
-              <img src="./icons/intwell_logo.png" alt="Intwell Web Development Logo" width="120" />
-            </a>
-
-            <nav class="flex">
-              <!-- Mobile Menu Icons -->
-              <div class="mobile-menu cursor-pointer" id="mobile-menu">
-                <div class="humburger-icon">
-                  <svg
-                    class="w-6 h-6 text-white"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
-                  </svg>
-                </div>
-                <div class="close-button">
-                  <svg
-                    class="w-6 h-6 text-gray-800"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <!-- Navigation Menu -->
-              <ul class="space-x-8 text-lg flex">
-                <li><a href="#hero" class="hover:text-slate-200 transition">Home</a></li>
-                <li><a href="#about" class="hover:text-slate-200 transition">About</a></li>
-                <li>
-                  <a href="#services" class="hover:text-slate-200 transition">Services</a>
-                </li>
-                <li><a href="#contact" class="hover:text-slate-200 transition">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-
-        <!-- Main Content -->
-        <main class="w-full mx-auto px-4 max-w-[1200px] min-h-screen overflow-hidden" id="main-container">
-          <!-- Hero Section -->
-          <section
-            class="text-center mx-auto h-full flex items-center justify-center flex-col mt-44 mb-32 md:mb-48 trigger-line-animation"
-            id="hero"
-            aria-label="hero-section"
-          >
-            <div class="w-fit overflow-hidden mb-6">
-              <h1 class="sm:text-6xl text-4xl font-extrabold line-animation mb-2">We build Websites</h1>
-              <h1 class="sm:text-6xl text-4xl font-extrabold line-animation">That Build Your Business</h1>
-            </div>
-
-            <div class="w-fit overflow-hidden leading-none mb-6">
-              <p class="text-md sm:text-lg md:text-xl text-gray-600 max-w-2xl line-animation">
-                Building dreams into reality to connect you through the internet. Bring your business to the forefront so that everyone can connect
-                with you.
-              </p>
-            </div>
-
-            <a href="#contact" class="inline-block bg-purple-500 hover:bg-purple-700 transition text-white font-bold py-2 px-4 rounded-md text-xl">
-              Start a Project
-            </a>
-          </section>
-
-          <!-- About section  -->
-          <section class="mx-auto h-full lg:flex lg:justify-between mb-32 md:mb-40 trigger-line-animation" id="about" aria-label="about-section">
-            <div class="w-fit overflow-hidden leading-none underline decoration-purple-500">
-              <h2 class="sm:text-6xl text-4xl font-bold mb-6 line-animation">About US.</h2>
-            </div>
-            <div class="md:max-w-3xl w-full text-justify text-md sm:text-lg md:text-xl leading-normal">
-              <div class="w-fit overflow-hidden leading-tight">
-                <p class="mb-10 line-animation">
-                  At Intwell web Development Agency, we believe that a great website is the cornerstone of every successful business. We are a team of
-                  passionate designers, developers, and strategists who specialize in building custom websites that not only look amazing but also
-                  perform. With a client-first approach, we focus on understanding your unique business goals to craft digital solutions that drive
-                  results. Our mission is to help businesses of all sizes create a strong online presence through modern design, responsive
-                  development, and scalable technology. From simple landing pages to complex e-commerce platforms, we deliver with precision,
-                  creativity, and care.
-                </p>
-              </div>
-              <div class="w-fit overflow-hidden leading-none">
-                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold my-6 underline decoration-purple-500 line-animation">Why Choose Us:</h3>
-              </div>
-              <div class="w-fit overflow-hidden leading-none">
-                <ul class="list-disc list-inside ml-4 text-md sm:text-lg md:text-xl line-animation">
-                  <li>Clean, modern, and mobile-first design</li>
-                  <li>Personalized solutions tailored to your business</li>
-                  <li>Proven results in performance and user experience</li>
-                  <li>Cost-effective pricing</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <!-- Services Section -->
-          <section class="mx-auto h-full mb-32 md:mb-40 trigger-line-animation" id="services" aria-label="services-section">
-            <div class="w-fit overflow-hidden leading-none">
-              <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500 line-animation">Services.</h2>
-            </div>
-            <div
-              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4 flex-wrap h-auto trigger-line-animation"
-              id="services-container"
-            >
-              <!-- Services are loaded here -->
-            </div>
-          </section>
-
-          <!-- Contact Section -->
-          <section class="flex flex-col trigger-line-animation" id="contact" aria-label="contact-section">
-            <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500 line-animation">Contact.</h2>
-
-            <div class="px-4 sm:flex w-full sm:items-center sm:justify-between gap-5 line-animation">
-              <form action="#" class="space-y-8 mb-4 w-full sm:w-1/2" id="contact-form">
-                <div class="mb-5">
-                  <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name :</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    class="shadow-sm border border-slate-900 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                    placeholder="John Doe"
-                    required
-                  />
-                </div>
-                <div class="mb-5">
-                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email :</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="shadow-sm border border-slate-900 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                    placeholder="name@flowbite.com"
-                    required
-                  />
-                </div>
-                <div class="mb-5">
-                  <label for="mobile-no" class="block mb-2 text-sm font-medium text-gray-900">Mobile No :</label>
-                  <input
-                    type="text"
-                    id="mobile-no"
-                    name="mobile-no"
-                    class="block p-3 w-full text-md text-gray-900 border border-slate-900 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
-                    placeholder="+91 1234567890"
-                    required
-                  />
-                </div>
-                <div class="mb-5">
-                  <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your message :</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    class="block p-2.5 w-full text-md text-gray-900 rounded-lg border border-slate-900 shadow-sm focus:ring-primary-500 focus:border-primary-500 resize-none"
-                    placeholder="Leave a message..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="py-3 w-full sm:w-fit px-5 text-md font-medium text-center text-slate-900 rounded-lg bg-primary-700 hover:cursor-pointer hover:bg-purple-500 hover:text-white transition border border-slate-900 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
-                >
-                  Send message
-                </button>
-              </form>
-
-              <!-- Google Map -->
-              <div class="w-full sm:w-1/2 h-[500px] rounded-lg border border-purple-950 overflow-auto">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473.1836167857273!2d77.6947485092552!3d29.481840544907335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1b82ce377ff3%3A0x33d9851b0431db65!2sAxis%20Institute%20And%20Intwell%20Web%20Development%2C%20143%20ROORKEE%20ROAD%2C%20SH%2059%2C%20Rampuri%2C%20Muzaffarnagar%2C%20Uttar%20Pradesh%20251001!5e0!3m2!1sen!2sin!4v1746005176083!5m2!1sen!2sin"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  class="w-full h-full"
-                ></iframe>
-              </div>
-            </div>
-          </section>
+        <main>
+            {{> hero }}
+            {{> about }}
+            {{> services }}
+            {{> feedback }}
+            {{> contact }}
         </main>
-
-        <!-- Back to Top Button -->
-        <div class="flex justify-end px-4 sm:px-8">
-          <a
-            href="#main-container"
-            class="my-20 px-4 py-2 bg-purple-500 text-white text-lg rounded-lg self-end flex gap-1 items-center hover:bg-purple-600 hover:cursor-pointer transition"
-            >Back to Top
-            <svg
-              class="w-6 h-6 text-white up-arrow"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4" />
-            </svg>
-          </a>
-        </div>
-
-        <!-- Footer -->
-        <footer class="p-4 bg-purple-500 text-white sm:p-6 border border-t-purple-200 trigger-line-animation" id="footer" aria-label="footer-section">
-          <div class="mx-auto max-w-screen-xl">
-            <div class="sm:flex sm:gap-3.5 sm:justify-between">
-              <div class="mb-6 md:mb-0 w-fit overflow-hidden">
-                <a href="/" class="w-fit overflow-hidden flex items-center line-animation">
-                  <img src="./icons/intwell_logo.png" alt="Intwell Web Development Logo" width="120" />
-                </a>
-              </div>
-              <div class="w-fit overflow-hidden sm:w-96 mb-5 sm:mb-0">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.1591577576455!2d77.72802807436925!3d29.453362475226633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1b002726e857%3A0x22ac890be61f9dd4!2sAmit%20vihar%20kukra.%20Muzaffarnagar!5e0!3m2!1sen!2sin!4v1746783412627!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  class="line-animation"
-                ></iframe>
-              </div>
-              <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                <div class="w-fit overflow-hidden">
-                  <div class="w-fit overflow-hidden">
-                    <h3 class="mb-6 text-sm font-semibold uppercase line-animation">Address</h3>
-                  </div>
-
-                  <address class="text-white not-italic w-fit overflow-hidden">
-                    <div class="line-animation">
-                      143 Top Floor, <br />
-                      Roorkee Road, <br />
-                      Muzaffarnagar - 251001 <br />
-                      Uttar Pradesh India
-                    </div>
-                  </address>
-                </div>
-                <div>
-                  <div class="w-fit overflow-hidden">
-                    <h3 class="mb-6 text-sm font-semibold uppercase line-animation">Contact</h3>
-                  </div>
-                  <ul class="text-white w-fit overflow-hidden">
-                    <li class="mb-4 line-animation">
-                      <a href="mailto:intwelldevelopment@gmail.com" class="hover:underline">intwelldevelopment<br />@gmail.com</a>
-                    </li>
-                    <li class="line-animation">
-                      <a href="tel:+918791473908" class="hover:underline">+91 8791473908</a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <div class="w-fit overflow-hidden">
-                    <h3 class="mb-6 text-sm font-semibold uppercase line-animation">Legal</h3>
-                  </div>
-                  <ul class="text-white w-fit overflow-hidden">
-                    <li class="mb-4 line-animation">
-                      <a href="#" class="hover:underline">Privacy Policy</a>
-                    </li>
-                    <li class="line-animation">
-                      <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <hr class="my-6 border-purple-200 sm:mx-auto lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between w-fit overflow-hidden">
-              <span class="text-sm text-white sm:text-center line-animation"
-                >© 2025 <a href="#hero" class="hover:underline">IntWell™</a>. All Rights Reserved.
-              </span>
-            </div>
-          </div>
-        </footer>
+        {{> footer }}
       </div>
     </div>
 
-    <!-- Chat Bubble -->
-    <div class="chat-bubble" id="chatBubble">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" />
-        <path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" />
-      </svg>
-    </div>
-
-    <!-- Chat Container -->
-    <div class="chat-container hidden" id="chatContainer">
-      <audio src="/audio/incoming-message-sound-effect.mp3" type="audio/mpeg" id="audio"></audio>
-      <div class="chat-header" id="chatHeader">
-        <div class="header-title">
-          <img src="./icons/intwell_logo.png" alt="Intwell Logo" />
-          <span>Intwell Assistant</span>
-        </div>
-        <div class="header-buttons">
-          <button id="minimizeChat">−</button>
-          <button id="closeChat">×</button>
-        </div>
-      </div>
-
-      <div class="chat-body" id="chatBody">
-        <div class="chat-message bot-message">
-          Hi there! 👋 I'm the Intwell Web Agency assistant. How can I help you today with your web development needs?
-        </div>
-      </div>
-
-      <div class="chat-footer">
-        <input type="text" class="chat-input" id="chatInput" placeholder="Type your message here..." autocomplete="off" />
-        <button class="send-button" id="sendMessage">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-    </div>
+    {{> chat }}
 
     <!-- EmailJS script -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -385,6 +53,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- MotionPathPlugin script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/MotionPathPlugin.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- ScrollSmoother script -->
     <script
@@ -410,7 +81,6 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <!-- Main script -->
     <script type="module" src="./src/assets/js/main.js"></script>
   </body>
 </html>
