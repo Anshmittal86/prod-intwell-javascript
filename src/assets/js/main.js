@@ -225,19 +225,20 @@ function initRedesignInteractions() {
 
   // Smooth header blur transition on scroll using GSAP scrub
   const header = document.getElementById('header');
+  const headerBg = document.getElementById('header-bg');
   if (header) {
     // Set initial state to ensure proper interpolation
     gsap.set(header, { maxWidth: '100%' });
-    
+
+    // Layout properties go on #header itself. backdropFilter/box-shadow/etc.
+    // must stay on the separate #header-bg layer: applying a filter directly
+    // to #header would make it a containing block for its fixed-position
+    // mobile nav drawer, pulling the full-screen drawer inward to match the
+    // shrunk header pill instead of the viewport.
     gsap.to(header, {
       width: '85%',
       maxWidth: '960px',
       top: '16px',
-      borderRadius: '32px', // rounded-full sometimes distorts on wide rectangles, 32px is a nice pill shape
-      backgroundColor: 'rgba(252, 249, 248, 0.7)',
-      backdropFilter: 'blur(24px)',
-      WebkitBackdropFilter: 'blur(24px)',
-      boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
       ease: 'none',
       scrollTrigger: {
         trigger: document.body,
@@ -246,6 +247,23 @@ function initRedesignInteractions() {
         scrub: 0.5
       }
     });
+
+    if (headerBg) {
+      gsap.to(headerBg, {
+        borderRadius: '32px', // rounded-full sometimes distorts on wide rectangles, 32px is a nice pill shape
+        backgroundColor: 'rgba(252, 249, 248, 0.7)',
+        backdropFilter: 'blur(24px)',
+        WebkitBackdropFilter: 'blur(24px)',
+        boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: document.body,
+          start: 'top top',
+          end: 'top -150px',
+          scrub: 0.5
+        }
+      });
+    }
   }
 
   // Active link logic
@@ -558,6 +576,30 @@ function initServicesMarquee() {
   }
 }
 
+function initHeroMarquee() {
+  const contents = document.querySelectorAll('#hero .marquee-content');
+  if (!contents.length) return;
+
+  // Default direction: right to left, same as the original CSS keyframe animation.
+  const tween = gsap.to(contents, {
+    xPercent: -100,
+    ease: 'none',
+    duration: 30,
+    repeat: -1
+  });
+
+  // Flip direction to match scroll direction: scrolling down keeps it
+  // right-to-left, scrolling up reverses it to left-to-right.
+  ScrollTrigger.create({
+    trigger: document.body,
+    start: 0,
+    end: 'max',
+    onUpdate: (self) => {
+      tween.timeScale(self.direction === 1 ? 1 : -1);
+    }
+  });
+}
+
 hideLoader();
 handleSmoothScroll();
 handleGsapAnimation();
@@ -567,3 +609,4 @@ getServices().then(() => {
 getFeedbacks();
 validateForm();
 initRedesignInteractions();
+initHeroMarquee();

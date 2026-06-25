@@ -1,5 +1,6 @@
-<header class="sticky top-0 z-50 mx-auto w-full py-4 bg-surface" id="header" style="background-color: rgba(252, 249, 248, 1);">
-  <nav class="flex justify-between items-center w-full px-8 md:px-12 max-w-[1048px] mx-auto">
+<header class="sticky top-0 z-50 mx-auto w-full py-4" id="header">
+  <div id="header-bg" class="absolute inset-0 -z-10 bg-surface" style="background-color: rgba(252, 249, 248, 1);"></div>
+  <nav class="relative flex justify-between items-center w-full px-8 md:px-12 max-w-[1048px] mx-auto">
     <!-- Logo -->
     <a href="/" class="flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-primary rounded-sm outline-none">
       <span class="text-2xl font-black tracking-tighter text-black" style="font-family: 'Hanken Grotesk', sans-serif;">INTWELL</span>
@@ -10,18 +11,23 @@
       <div class="humburger-icon">
         <span class="material-symbols-outlined text-3xl text-black">menu</span>
       </div>
-      <div class="close-button hidden">
+      <div class="close-button">
         <span class="material-symbols-outlined text-3xl text-black">close</span>
       </div>
     </button>
 
     <!-- Nav Links -->
-    <div class="hidden md:flex items-center gap-8 font-bold text-sm tracking-wide">
-      <a class="nav-link text-secondary transition-colors focus-visible:ring-2 focus-visible:ring-primary rounded-sm outline-none pb-1" href="#hero">Home</a>
-      <a class="nav-link text-gray-600 hover:text-secondary transition-colors focus-visible:ring-2 focus-visible:ring-primary rounded-sm outline-none pb-1" href="#about">About</a>
-      <a class="nav-link text-gray-600 hover:text-secondary transition-colors focus-visible:ring-2 focus-visible:ring-primary rounded-sm outline-none pb-1" href="#contact">Contact Us</a>
-      <a class="nav-link text-gray-600 hover:text-secondary transition-colors focus-visible:ring-2 focus-visible:ring-primary rounded-sm outline-none pb-1" href="#services">Resources</a>
-    </div>
+    <ul class="flex md:items-center gap-8 font-bold text-sm tracking-wide">
+      <li><a class="nav-link text-secondary transition-colors focus-visible:ring-2 focus-visible:ring-primary rounded-sm outline-none pb-1" href="#hero">Home</a></li>
+      <li><a class="nav-link text-gray-600 hover:text-secondary transition-colors focus-visible:ring-2 focus-visible:ring-primary rounded-sm outline-none pb-1" href="#about">About</a></li>
+      <li><a class="nav-link text-gray-600 hover:text-secondary transition-colors focus-visible:ring-2 focus-visible:ring-primary rounded-sm outline-none pb-1" href="#contact">Contact Us</a></li>
+      <li><a class="nav-link text-gray-600 hover:text-secondary transition-colors focus-visible:ring-2 focus-visible:ring-primary rounded-sm outline-none pb-1" href="#services">Resources</a></li>
+      <li class="md:hidden">
+        <a href="tel:+918791473908" class="bg-[#0b0614] text-white px-6 py-3 rounded-full font-bold text-sm hover:scale-105 transition-all duration-300 shadow-xl shadow-black/20 inline-flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-primary outline-none">
+          <span class="material-symbols-outlined text-lg">call</span>Call Now
+        </a>
+      </li>
+    </ul>
 
     <!-- Call to Action -->
     <div class="hidden md:flex items-center">
